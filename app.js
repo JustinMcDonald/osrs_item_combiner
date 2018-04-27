@@ -29,8 +29,8 @@ app.get('/search', function(req, res, next) {
   }
 })
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log('Listening on http://localhost:' + (process.env.PORT || 3000))
+app.listen(process.env.PORT || 8081, function () {
+  console.log('Listening on http://localhost:' + (process.env.PORT || 8081))
 })
 
 getAllItemSources = function(search, res) {
