@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title #{title}
+    style.
+      canvas {
+        float: left
+      }
+  body
+    h1 #{hero}
+    form(method='GET',action='/search')
+      input(type='text',name='search',value=search)
+      input(type='submit',value='Search')
+    hr
+    script.
+      var store = []
+    - each image in imageStore
+      // img(src=image)
+      script.
+        store.push("#{image}")
+    div#item-combiner-wrapper
+  script(src="/js/ItemCombiner.js")
+  script.
+    window.ItemCombiner.init(store)
